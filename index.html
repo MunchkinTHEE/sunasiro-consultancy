@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SUNASIRO CONSULTANCY — Expert occupational health, wellness, and HSE consultancy. Protecting people, ensuring compliance, building safer workplaces." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>SUNASIRO CONSULTANCY | Occupational Health & HSE Experts</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f5fa',
+              100: '#dce7f3',
+              200: '#b8cfe7',
+              300: '#89aed3',
+              400: '#5889ba',
+              500: '#3a6b9e',
+              600: '#2d5582',
+              700: '#26446a',
+              800: '#223a58',
+              900: '#0A2540',
+              950: '#061628',
+            },
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            sage: {
+              50: '#f6f7f4',
+              100: '#e9ebe3',
+              200: '#d4d8c8',
+              300: '#b5bda5',
+              400: '#96a183',
+              500: '#7a8668',
+              600: '#606b52',
+              700: '#4c5442',
+              800: '#3f4538',
+              900: '#363b31',
+            },
+            cream: '#F8FAF7',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 4px 24px -4px rgba(10, 37, 64, 0.08)',
+            card: '0 8px 32px -8px rgba(10, 37, 64, 0.12)',
+            glow: '0 0 40px -8px rgba(20, 184, 166, 0.25)',
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease-out forwards',
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(16px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom base styles */
+    body { font-feature-settings: "cv02", "cv03", "cv04", "cv11"; }
+    .text-balance { text-wrap: balance; }
+    
+    /* Smooth header transition */
+    .header-scrolled {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(10, 37, 64, 0.06);
+    }
+
+    /* Accordion */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .accordion-content.open {
+      max-height: 1200px;
+      opacity: 1;
+    }
+
+    /* Service card hover */
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px -12px rgba(10, 37, 64, 0.15);
+    }
+
+    /* Floating CTA */
+    .float-cta {
+      animation: pulse-soft 2.5s infinite;
+    }
+    @keyframes pulse-soft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(20, 184, 166, 0); }
+    }
+
+    /* Progress bar for long sections */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0d9488, #14b8a6);
+      z-index: 100;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+  </style>
+</head>
+<body class="bg-cream text-navy-900 font-sans antialiased">
+  <!-- Progress indicator -->
+  <div id="progress-bar"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-navy-900 flex items-center justify-center shadow-soft">
+            <span class="text-white font-display font-bold text-lg">S</span>
+          </div>
+          <div class="hidden sm:block">
+            <span class="font-display font-bold text-navy-900 text-lg leading-tight tracking-tight">SUNASIRO</span>
+            <span class="block text-[10px] uppercase tracking-widest text-navy-500 font-medium -mt-0.5">Consultancy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium text-navy-700 hover:text-teal-600 transition-colors">Services</a>
+          <a href="#about" class="text-sm font-medium text-navy-700 hover:text-teal-600 transition-colors">About</a>
+          <a href="#clients" class="text-sm font-medium text-navy-700 hover:text-teal-600 transition-colors">Clients</a>
+          <a href="#resources" class="text-sm font-medium text-navy-700 hover:text-teal-600 transition-colors">Resources</a>
+          <a href="#contact" class="text-sm font-medium text-navy-700 hover:text-teal-600 transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-navy-900 text-white text-sm font-semibold hover:bg-teal-700 transition-all shadow-soft">
+            Request Consultation
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-navy-700 hover:bg-navy-50" aria-label="Toggle menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-navy-100 shadow-card">
+      <div class="px-4 py-4 space-y-1">
+        <a href="#services" class="block px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-teal-50">Services</a>
+        <a href="#about" class="block px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-teal-50">About</a>
+        <a href="#clients" class="block px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-teal-50">Clients</a>
+        <a href="#resources" class="block px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-teal-50">Resources</a>
+        <a href="#contact" class="block px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-teal-50">Contact</a>
+        <a href="#contact" class="mt-2 flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-navy-900 text-white font-semibold">
+          Request Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-teal-900"></div>
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-teal-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-400/20 rounded-full blur-3xl"></div>
+    </div>
+    <!-- Subtle grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-teal-200 text-xs font-medium mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
+            Occupational Health • Wellness • HSE Consultancy
+          </div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.15] tracking-tight text-balance">
+            Protecting People.<br />
+            <span class="text-teal-300">Ensuring Compliance.</span><br />
+            Building Safer Workplaces.
+          </h1>
+          <p class="mt-6 text-lg text-navy-100/90 leading-relaxed max-w-xl">
+            Expert medical fitness, wellness programmes, and full-spectrum HSE solutions trusted by construction, manufacturing, healthcare, oil & gas, and leading organisations across sectors.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-teal-500 text-navy-950 font-semibold text-base hover:bg-teal-400 transition-all shadow-glow">
+              Book a Consultation
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/10 border border-white/25 text-white font-semibold text-base hover:bg-white/20 transition-all">
+              Explore Services
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="mt-12 flex flex-wrap items-center gap-6 text-sm text-navy-200">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-5 h-5 text-teal-400"></i>
+              <span>ISO 45001 & 14001 Aligned</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="badge-check" class="w-5 h-5 text-teal-400"></i>
+              <span>DOSHS / OSHA Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="users" class="w-5 h-5 text-teal-400"></i>
+              <span>Multi-Sector Expertise</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="reveal relative hidden lg:block" style="transition-delay: 0.15s">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            <img 
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80" 
+              alt="African professional medical consultant in healthcare setting" 
+              class="w-full h-[480px] object-cover"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="bg-white/95 backdrop-blur rounded-xl p-4 shadow-card">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">
+                    <i data-lucide="heart-pulse" class="w-5 h-5 text-teal-700"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-navy-900 text-sm">Fit-to-Work & Exit Medicals</p>
+                    <p class="text-navy-600 text-xs mt-0.5">Certificates • Risk assessments • Compliance-ready reports</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -left-6 top-16 bg-white rounded-xl shadow-card p-4 border border-navy-100">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-sage-100 flex items-center justify-center">
+                <i data-lucide="clipboard-check" class="w-6 h-6 text-sage-700"></i>
+              </div>
+              <div>
+                <p class="text-2xl font-display font-bold text-navy-900">HSE</p>
+                <p class="text-xs text-navy-500">Full-spectrum systems</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES OVERVIEW ========== -->
+  <section id="services" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <p class="text-sm font-semibold text-teal-600 uppercase tracking-wider">What We Deliver</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-900 text-balance">
+          Comprehensive Occupational Health & HSE Solutions
+        </h2>
+        <p class="mt-4 text-navy-600 text-lg leading-relaxed">
+          From wellness programmes and fit-to-work examinations to ISO-aligned HSE management systems, audits, training, and incident investigations — we protect your people and your compliance posture.
+        </p>
+      </div>
+
+      <!-- Bento-style service cards -->
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Card 1 -->
+        <a href="#wellness" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200">
+          <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Wellness</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Annual medicals, individual plans, walk-in check-ups & event medical support.</p>
+        </a>
+        <!-- Card 2 -->
+        <a href="#fit-to-work" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.05s">
+          <div class="w-12 h-12 rounded-xl bg-navy-100 text-navy-700 flex items-center justify-center mb-4 group-hover:bg-navy-800 group-hover:text-white transition-colors">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Fit-to-Work & Exit</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Capability assessments, fitness certificates, exit health records & disease assessments.</p>
+        </a>
+        <!-- Card 3 -->
+        <a href="#hse-management" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.1s">
+          <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4 group-hover:bg-sage-600 group-hover:text-white transition-colors">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">HSE Management</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Audits, ISO 45001/14001 systems, safety culture & statutory compliance.</p>
+        </a>
+        <!-- Card 4 -->
+        <a href="#training" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.15s">
+          <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">OHS Training</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Custom modules, toolbox talks, leadership workshops & competency programmes.</p>
+        </a>
+        <!-- Card 5 -->
+        <a href="#fire-safety" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.2s">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+            <i data-lucide="flame" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Fire Safety</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Hazard evaluation, evacuation planning, floor maps & drill evaluations.</p>
+        </a>
+        <!-- Card 6 -->
+        <a href="#investigations" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.25s">
+          <div class="w-12 h-12 rounded-xl bg-navy-100 text-navy-700 flex items-center justify-center mb-4 group-hover:bg-navy-800 group-hover:text-white transition-colors">
+            <i data-lucide="search" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Incident Investigations</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Root-cause analysis, RCA reports, CAPA & lessons-learned programmes.</p>
+        </a>
+        <!-- Card 7 -->
+        <a href="#inspections" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.3s">
+          <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-700 flex items-center justify-center mb-4 group-hover:bg-sage-600 group-hover:text-white transition-colors">
+            <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Safety Inspections</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">Hazard identification, control verification, PPE & compliance trend analysis.</p>
+        </a>
+        <!-- Card 8 -->
+        <a href="#construction" class="service-card group reveal bg-cream rounded-2xl p-6 border border-navy-100/80 hover:border-teal-200" style="transition-delay: 0.35s">
+          <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+            <i data-lucide="hard-hat" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-semibold text-navy-900 text-lg">Construction Site Safety</h3>
+          <p class="mt-2 text-sm text-navy-600 leading-relaxed">SSHEP, risk registers, scaffold/crane oversight & contractor compliance.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DETAILED SERVICES (Accordions) ========== -->
+  <section class="py-20 lg:py-28 bg-navy-50/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <p class="text-sm font-semibold text-teal-600 uppercase tracking-wider">Deep Dive</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-900">Our Core Service Lines</h2>
+        <p class="mt-3 text-navy-600">Expand each service to see deliverables, methodology and benefits.</p>
+      </div>
+
+      <div class="space-y-4" id="accordion-container">
+        <!-- 1. Wellness -->
+        <div id="wellness" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Wellness Programmes</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 leading-relaxed mb-4">Comprehensive wellness solutions designed for corporate teams and individuals, focused on early detection, prevention and sustained workforce health.</p>
+              <ul class="space-y-2 text-navy-700">
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Annual medical examinations for corporate employees</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Individualized wellness plans tailored to risk profiles</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Walk-in wellness check-ups for convenience</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> On-site medical aid and support during events & activities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Fit-to-Work -->
+        <div id="fit-to-work" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-navy-100 text-navy-700 flex items-center justify-center shrink-0">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Medical Fit-to-Work & Exit Examinations</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50 space-y-6">
+              <div>
+                <h4 class="font-semibold text-navy-900 mb-2">Fit-to-Work Examinations</h4>
+                <p class="text-navy-600 text-sm leading-relaxed mb-3">Capability assessment prior to employment, task change or return after illness. Evaluates physical, psychological and functional readiness through medical history, organ systems review, spirometry, audiometry and drug screening.</p>
+                <p class="text-sm"><span class="font-medium text-navy-800">Deliverable:</span> Fitness Certificate (Fit / Fit with Restrictions / Unfit)</p>
+                <p class="text-sm mt-1"><span class="font-medium text-navy-800">Benefits:</span> Accident prevention, DOSHS/OSHA compliance, reduced liability exposure.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 mb-2">Exit Medical Examinations</h4>
+                <p class="text-navy-600 text-sm leading-relaxed mb-3">Documents health status on leaving employment or project completion. Screens for occupational exposures, injuries and latent conditions via exposure history, targeted chest X-rays, blood panels and exit physicals.</p>
+                <p class="text-sm"><span class="font-medium text-navy-800">Deliverable:</span> Exit Health Record & Occupational Disease Assessment Report</p>
+                <p class="text-sm mt-1"><span class="font-medium text-navy-800">Benefits:</span> Protection against future claims and clear proof of duty of care.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. HSE Management -->
+        <div id="hse-management" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Workplace Health, Safety & Environmental Management</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <ul class="space-y-2.5 text-navy-700 text-sm">
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Safety documentation review, employee & management interviews, facility inspections and daily protocol evaluation</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Auditing & improving safe systems of work (Permit to Work, Task-Specific Risk Assessments)</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Safety culture assessments (structured interviews + behaviour-based observations)</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Statutory compliance (OSHA / DOSHS, NEMA)</li>
+                <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-teal-600 shrink-0"></i> Development & implementation of integrated HSE Management Systems aligned with ISO 45001 & ISO 14001</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Training -->
+        <div id="training" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Occupational Health & Safety (OHS) Training</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 text-sm mb-3">Custom modules, toolbox talks, safety leadership workshops and competency-based training.</p>
+              <p class="text-sm font-medium text-navy-800 mb-2">Key topics include:</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">First Aid</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">Manual Handling</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">COSHH / GHS</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">Working at Height</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">LOTO</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">Risk Assessment & JSA</span>
+                <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-700 text-xs font-medium">Incident Reporting</span>
+              </div>
+              <p class="text-sm text-navy-600"><span class="font-medium text-navy-800">Deliverables:</span> Training materials, attendance registers, post-training evaluations and certificates of competence.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Fire Safety -->
+        <div id="fire-safety" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center shrink-0">
+                <i data-lucide="flame" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Fire Safety Assessments & Evacuation Planning</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 text-sm mb-3">Fire hazard evaluation and emergency response strategies covering combustible materials, ignition sources, detection & suppression systems, exit routes and drill plans.</p>
+              <p class="text-sm font-medium text-navy-800 mb-1">Deliverables:</p>
+              <ul class="text-sm text-navy-700 space-y-1">
+                <li>• Fire Risk Assessment Report</li>
+                <li>• Emergency Evacuation Floor Maps / Schematics</li>
+                <li>• Fire Warden Guidelines</li>
+                <li>• Drill Evaluation Summaries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Investigations -->
+        <div id="investigations" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-navy-100 text-navy-700 flex items-center justify-center shrink-0">
+                <i data-lucide="search" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Incident Investigations</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 text-sm mb-3">Structured root-cause analysis (5 Whys, Fishbone) for injuries, near-misses, dangerous occurrences and property damage. Includes evidence gathering, witness interviews, sequence analysis and preventive recommendations.</p>
+              <p class="text-sm font-medium text-navy-800 mb-1">Deliverables:</p>
+              <ul class="text-sm text-navy-700 space-y-1">
+                <li>• Formal Investigation Report</li>
+                <li>• RCA breakdown & causal factors</li>
+                <li>• Statutory notification support</li>
+                <li>• Lessons learned + CAPA action plans</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Inspections -->
+        <div id="inspections" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center shrink-0">
+                <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Safety Inspections</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 text-sm mb-3">Routine, planned and targeted inspections covering hazard identification, control verification, machine guarding, PPE, fire systems, emergency equipment and exits. Includes review of previous corrective actions.</p>
+              <p class="text-sm text-navy-700"><span class="font-medium text-navy-800">Deliverables:</span> Comprehensive inspection reports, CAPA plans and compliance trend analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Construction -->
+        <div id="construction" class="reveal bg-white rounded-2xl border border-navy-100 shadow-soft overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="hard-hat" class="w-5 h-5"></i>
+              </div>
+              <span class="font-display font-semibold text-navy-900 text-lg">Construction Site Safety Consulting</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-navy-400 transition-transform duration-300 accordion-icon"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="px-6 pb-6 pt-1 border-t border-navy-50">
+              <p class="text-navy-600 text-sm mb-3">HSE advisory and oversight for construction, civil and infrastructure projects. Review of site safety plans, scaffolding, excavations, crane/lifting operations, temporary electrical systems and contractor compliance.</p>
+              <p class="text-sm font-medium text-navy-800 mb-1">Deliverables:</p>
+              <ul class="text-sm text-navy-700 space-y-1">
+                <li>• Site Safety Health and Environment Plan (SSHEP)</li>
+                <li>• Site-specific risk registers</li>
+                <li>• Daily / weekly inspection logs</li>
+                <li>• Contractor pre-qualification support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal">
+          <p class="text-sm font-semibold text-teal-600 uppercase tracking-wider">About SUNASIRO</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-900 text-balance">
+            Protecting Workforce Health & Ensuring Regulatory Compliance
+          </h2>
+          <p class="mt-5 text-navy-600 leading-relaxed">
+            SUNASIRO CONSULTANCY exists to safeguard people and organisations through expert occupational health, wellness and full-spectrum HSE consultancy. We combine clinical rigour with practical safety systems so that every workplace we support becomes safer, healthier and fully compliant.
+          </p>
+          <p class="mt-4 text-navy-600 leading-relaxed">
+            Our approach is collaborative and evidence-based. We partner with leadership teams, HSE officers and medical departments to design solutions that fit operational realities while meeting the highest standards of DOSHS, OSHA, NEMA and ISO frameworks.
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-6">
+            <div>
+              <p class="text-3xl font-display font-bold text-teal-600">ISO</p>
+              <p class="text-sm text-navy-600 mt-1">45001 & 14001 aligned systems</p>
+            </div>
+            <div>
+              <p class="text-3xl font-display font-bold text-teal-600">Multi</p>
+              <p class="text-sm text-navy-600 mt-1">Sector expertise across industries</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal relative" style="transition-delay: 0.1s">
+          <div class="rounded-2xl overflow-hidden shadow-card">
+            <img 
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+              alt="Diverse African professional team in consultation meeting" 
+              class="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-navy-900 text-white rounded-xl p-5 shadow-xl max-w-xs">
+            <p class="text-sm font-medium leading-snug">“Expert Occupational Health & HSE Solutions for a Healthier, Safer Workforce.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLIENTS / INDUSTRIES ========== -->
+  <section id="clients" class="py-20 lg:py-28 bg-navy-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <p class="text-sm font-semibold text-teal-400 uppercase tracking-wider">Who We Serve</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold">Industries & Organisations We Support</h2>
+        <p class="mt-4 text-navy-300">Trusted by organisations that prioritise people, compliance and operational excellence.</p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+          <i data-lucide="building-2" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Construction Companies</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.05s">
+          <i data-lucide="factory" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Manufacturing Firms</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.1s">
+          <i data-lucide="hospital" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Hospitals & Clinics</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.15s">
+          <i data-lucide="utensils" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Hotels & Restaurants</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.2s">
+          <i data-lucide="warehouse" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Warehouses & Logistics</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.25s">
+          <i data-lucide="fuel" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">Oil & Gas Companies</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.3s">
+          <i data-lucide="handshake" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">NGOs & Government</span>
+        </div>
+        <div class="reveal flex flex-col items-center text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" style="transition-delay: 0.35s">
+          <i data-lucide="briefcase" class="w-8 h-8 text-teal-400 mb-3"></i>
+          <span class="text-sm font-medium">SMEs & Growing Businesses</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESOURCES / TOOLS ========== -->
+  <section id="resources" class="py-20 lg:py-28 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <p class="text-sm font-semibold text-teal-600 uppercase tracking-wider">Consulting Tools & Resources</p>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-900">Practical Tools That Drive Results</h2>
+        <p class="mt-4 text-navy-600">We equip clients with clear, actionable documentation and frameworks that stand up to audits and real-world operations.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft">
+          <i data-lucide="file-search" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Risk Assessments</h3>
+          <p class="mt-2 text-sm text-navy-600">Task-specific and site-wide risk assessments with clear residual risk ratings and control recommendations.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft" style="transition-delay: 0.05s">
+          <i data-lucide="clipboard-check" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Safety Inspection Checklists</h3>
+          <p class="mt-2 text-sm text-navy-600">Custom and statutory checklists for routine, planned and targeted inspections.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft" style="transition-delay: 0.1s">
+          <i data-lucide="file-bar-chart" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Audit Reports</h3>
+          <p class="mt-2 text-sm text-navy-600">Comprehensive HSE audit findings with prioritised corrective and preventive actions.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft" style="transition-delay: 0.15s">
+          <i data-lucide="book-open" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Training Materials</h3>
+          <p class="mt-2 text-sm text-navy-600">Modular training packs, facilitator guides and participant handouts ready for deployment.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft" style="transition-delay: 0.2s">
+          <i data-lucide="file-warning" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Incident Investigation Reports</h3>
+          <p class="mt-2 text-sm text-navy-600">Formal RCA reports, causal factor analysis and actionable CAPA plans.</p>
+        </div>
+        <div class="reveal bg-white rounded-2xl p-6 border border-navy-100 shadow-soft" style="transition-delay: 0.25s">
+          <i data-lucide="map" class="w-8 h-8 text-teal-600 mb-4"></i>
+          <h3 class="font-display font-semibold text-navy-900">Emergency Response Plans</h3>
+          <p class="mt-2 text-sm text-navy-600">Site-specific ERP documents, evacuation maps and fire warden guidelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INSIGHTS TEASER ========== -->
+  <section class="py-16 bg-white border-y border-navy-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 reveal">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-navy-900">Insights & Resources</h2>
+          <p class="mt-1 text-navy-600">Practical guidance on occupational health, compliance and workplace safety.</p>
+        </div>
+        <a href="#contact" class="inline-flex items-center gap-2 text-teal-700 font-semibold hover:text-teal-800 transition-colors">
+          Request a briefing
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-3 gap-6">
+        <article class="reveal group">
+          <div class="aspect-[16/10] rounded-xl bg-navy-100 overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80" alt="African healthcare professionals collaborating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <h3 class="font-semibold text-navy-900 group-hover:text-teal-700 transition-colors">Building an ISO 45001-aligned HSE System</h3>
+          <p class="mt-1 text-sm text-navy-500">Key steps for organisations starting their management system journey.</p>
+        </article>
+        <article class="reveal group" style="transition-delay: 0.05s">
+          <div class="aspect-[16/10] rounded-xl bg-navy-100 overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba07efd?auto=format&fit=crop&w=600&q=80" alt="Black medical professional reviewing health records" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <h3 class="font-semibold text-navy-900 group-hover:text-teal-700 transition-colors">Why Exit Medicals Protect Employers</h3>
+          <p class="mt-1 text-sm text-navy-500">How proper documentation reduces future occupational disease claims.</p>
+        </article>
+        <article class="reveal group" style="transition-delay: 0.1s">
+          <div class="aspect-[16/10] rounded-xl bg-navy-100 overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="African construction and safety professionals on site" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <h3 class="font-semibold text-navy-900 group-hover:text-teal-700 transition-colors">Effective Toolbox Talks That Stick</h3>
+          <p class="mt-1 text-sm text-navy-500">Designing short, high-impact safety conversations for the front line.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="py-20 lg:py-28 bg-navy-50/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="reveal">
+          <p class="text-sm font-semibold text-teal-600 uppercase tracking-wider">Get in Touch</p>
+          <h2 class="mt-3 font-display text-3xl sm:text-4xl font-bold text-navy-900">Request a Consultation</h2>
+          <p class="mt-4 text-navy-600 leading-relaxed">
+            Tell us about your organisation and the services you need. Our team will respond promptly with next steps and availability.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-medium text-navy-900">Email</p>
+                <a href="mailto:consult@sunasiro.com" class="text-navy-600 hover:text-teal-700 transition-colors">consult@sunasiro.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-medium text-navy-900">Phone / WhatsApp</p>
+                <a href="tel:+254700000000" class="text-navy-600 hover:text-teal-700 transition-colors">+254 700 000 000</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-medium text-navy-900">Location</p>
+                <p class="text-navy-600">Nairobi, Kenya · Serving East Africa & beyond</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-navy-100" style="transition-delay: 0.1s">
+          <form id="contact-form" class="space-y-5" onsubmit="return handleSubmit(event)">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-navy-800 mb-1.5">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 rounded-xl border border-navy-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition text-navy-900" placeholder="Jane Doe" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-navy-800 mb-1.5">Work Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-xl border border-navy-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition text-navy-900" placeholder="jane@company.com" />
+              </div>
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-navy-800 mb-1.5">Organisation</label>
+              <input type="text" id="company" name="company" class="w-full px-4 py-2.5 rounded-xl border border-navy-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition text-navy-900" placeholder="Company name" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium text-navy-800 mb-1.5">Service of Interest</label>
+              <select id="service" name="service" class="w-full px-4 py-2.5 rounded-xl border border-navy-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition text-navy-900 bg-white">
+                <option value="">Select a service…</option>
+                <option>Wellness Programmes</option>
+                <option>Fit-to-Work / Exit Medicals</option>
+                <option>HSE Management Systems</option>
+                <option>OHS Training</option>
+                <option>Fire Safety & Evacuation</option>
+                <option>Incident Investigations</option>
+                <option>Safety Inspections</option>
+                <option>Construction Site Safety</option>
+                <option>General Consultation</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-navy-800 mb-1.5">Message *</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-navy-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition text-navy-900 resize-none" placeholder="Briefly describe your needs or project…"></textarea>
+            </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-navy-900 text-white font-semibold hover:bg-teal-700 transition-all shadow-soft">
+              Send Request
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+            <p id="form-status" class="text-sm text-center hidden"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-950 text-navy-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-teal-500 to-navy-700 flex items-center justify-center">
+              <span class="text-white font-display font-bold">S</span>
+            </div>
+            <span class="font-display font-bold text-white text-lg">SUNASIRO CONSULTANCY</span>
+          </div>
+          <p class="text-sm leading-relaxed max-w-xs">
+            Expert medical & HSE consultancy protecting people, ensuring compliance and building safer workplaces.
+          </p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-display font-semibold text-white mb-4">Services</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#wellness" class="hover:text-teal-400 transition-colors">Wellness</a></li>
+            <li><a href="#fit-to-work" class="hover:text-teal-400 transition-colors">Fit-to-Work & Exit</a></li>
+            <li><a href="#hse-management" class="hover:text-teal-400 transition-colors">HSE Management</a></li>
+            <li><a href="#training" class="hover:text-teal-400 transition-colors">OHS Training</a></li>
+            <li><a href="#construction" class="hover:text-teal-400 transition-colors">Construction Safety</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="font-display font-semibold text-white mb-4">Company</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#about" class="hover:text-teal-400 transition-colors">About Us</a></li>
+            <li><a href="#clients" class="hover:text-teal-400 transition-colors">Industries</a></li>
+            <li><a href="#resources" class="hover:text-teal-400 transition-colors">Resources</a></li>
+            <li><a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="font-display font-semibold text-white mb-4">Stay Updated</h4>
+          <p class="text-sm mb-3">Occasional insights on occupational health and HSE best practice.</p>
+          <form class="flex gap-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded-lg bg-navy-900 border border-navy-700 text-white text-sm placeholder-navy-500 focus:border-teal-500 outline-none" required />
+            <button type="submit" class="px-4 py-2 rounded-lg bg-teal-600 text-white text-sm font-medium hover:bg-teal-500 transition-colors">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-navy-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <p>© 2026 SUNASIRO CONSULTANCY. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-teal-400 transition-colors">Privacy</a>
+          <a href="#" class="hover:text-teal-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp / Phone -->
+  <a href="https://wa.me/254700000000" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform float-cta" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Icons
+    lucide.createIcons();
+
+    // Header scroll behaviour
+    const header = document.getElementById('header');
+    const progressBar = document.getElementById('progress-bar');
+
+    window.addEventListener('scroll', () => {
+      // Header
+      if (window.scrollY > 40) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+      // Progress
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('[data-lucide]');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+      } else {
+        mobileBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+      }
+      lucide.createIcons();
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+        lucide.createIcons();
+      });
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.accordion-icon');
+        const isOpen = content.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.accordion-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+        document.querySelectorAll('.accordion-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+        if (!isOpen) {
+          content.classList.add('open');
+          icon.style.transform = 'rotate(180deg)';
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Reveal on scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Form handler (demo)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Thank you! Your request has been received. We will respond shortly.';
+      status.classList.remove('hidden');
+      status.classList.add('text-teal-700');
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
