@@ -1,0 +1,9 @@
+{
+  "name": "sunasiro-consultancy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SUNASIRO CONSULTANCY – Medical & HSE website",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
