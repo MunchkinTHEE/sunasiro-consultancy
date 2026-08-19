@@ -1,5 +1,5 @@
 // Vercel Serverless Function – Resend integration
-// Sends consultation requests to sunasiro95@gmail.com
+// Sends consultation requests to sunasiroke@gmail.com
 //
 // Setup:
 // 1. Deploy this project to Vercel
@@ -41,7 +41,7 @@ export default async function handler(req, res) {
 
     const { data, error } = await resend.emails.send({
       from: 'SUNASIRO Website <onboarding@resend.dev>', // Change to your verified domain later e.g. noreply@yourdomain.com
-      to: ['munchkinthee@gmail.com'],
+      to: ['sunasiroke@gmail.com'],
       reply_to: email,
       subject: `Consultation Request — ${serviceLabel}`,
       html: `
