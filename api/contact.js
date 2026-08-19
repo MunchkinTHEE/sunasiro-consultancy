@@ -41,7 +41,7 @@ export default async function handler(req, res) {
 
     const { data, error } = await resend.emails.send({
       from: 'SUNASIRO Website <onboarding@resend.dev>', // Change to your verified domain later e.g. noreply@yourdomain.com
-      to: ['sunasiro95@gmail.com'],
+      to: ['munchkinthee@gmail.com'],
       reply_to: email,
       subject: `Consultation Request — ${serviceLabel}`,
       html: `
