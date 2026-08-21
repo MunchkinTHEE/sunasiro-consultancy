@@ -1,1 +1,271 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUNASIRO CONSULTANCY | Medical Fitness, Wellness & HSE Consultancy in Mombasa</title>
+  <meta name="description" content="SUNASIRO CONSULTANCY — Expert medical fitness exams, wellness programmes, HSE audits in Mombasa, Kenya." />
+  <link rel="canonical" href="https://sunasiroconsultancy.vercel.app/" />
+  <meta name="theme-color" content="#00b4d8" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {50:'#e6f9ff',100:'#b3ecff',200:'#80dfff',300:'#4dd2ff',400:'#1ac5ff',500:'#00b4d8',600:'#0096c7',700:'#0077b6',800:'#023e8a',900:'#03045e'},
+            accent: {500:'#ef233c',600:'#d90429',700:'#b00020'},
+            neutral: {50:'#f8fafc',100:'#f1f5f9',800:'#1e293b',900:'#0f172a'}
+          },
+          fontFamily: {
+            sans: ['Inter','system-ui','sans-serif'],
+            display: ['Plus Jakarta Sans','Inter','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: auto; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Plus Jakarta Sans', Inter, sans-serif; }
+    .gradient-hero { background: linear-gradient(135deg, #03045e 0%, #0077b6 45%, #00b4d8 100%); }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0, 180, 216, 0.25); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .accordion-content.open { max-height: 1200px; }
+    .nav-scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 50; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4); transition: transform 0.2s; }
+    .whatsapp-float:hover { transform: scale(1.08); }
+  </style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#home" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-display font-bold text-lg">S</div>
+          <div>
+            <span class="font-display font-bold text-lg text-neutral-900 tracking-tight">SUNASIRO</span>
+            <span class="block text-[10px] uppercase tracking-widest text-primary-600 font-semibold -mt-1">Consultancy</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Services</a>
+          <a href="#about" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">About</a>
+          <a href="#clients" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Clients</a>
+          <a href="#contact" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-accent-500 text-white text-sm font-semibold hover:bg-accent-600 transition shadow-lg shadow-accent-500/25">Request Consultation</a>
+          <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-neutral-100" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-neutral-100 shadow-lg">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#services" class="block py-2 text-neutral-800 font-medium">Services</a>
+        <a href="#about" class="block py-2 text-neutral-800 font-medium">About</a>
+        <a href="#clients" class="block py-2 text-neutral-800 font-medium">Clients</a>
+        <a href="#contact" class="block py-2 text-neutral-800 font-medium">Contact</a>
+        <a href="#contact" class="block mt-2 text-center py-3 rounded-full bg-accent-500 text-white font-semibold">Request Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
+    <div class="absolute inset-0 opacity-20">
+      <img src="images/foreman.jpg" alt="Construction site safety" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-900/95 via-primary-800/85 to-primary-700/70"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="max-w-3xl">
+        <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-primary-100 text-sm font-medium mb-6">Medical & Occupational Safety Experts — Mombasa</p>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Protecting People.<br/><span class="text-primary-200">Ensuring Compliance.</span><br/>Building Safer Workplaces.</h1>
+        <p class="mt-6 text-lg md:text-xl text-primary-100/90 max-w-2xl">Expert medical fitness, wellness programmes and full-spectrum HSE consultancy across Kenya.</p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-600 transition shadow-xl">Book Consultation</a>
+          <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold hover:bg-white/20 transition border border-white/20">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 md:py-28 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">What We Deliver</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Comprehensive Medical & HSE Solutions</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Wellness Check-ups</h3><p class="mt-2 text-sm text-neutral-600">Corporate & individual medical examinations.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Fit-to-Work & Exit Exams</h3><p class="mt-2 text-sm text-neutral-600">Capability assessments and exit health records.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">HSE Audits & Inspections</h3><p class="mt-2 text-sm text-neutral-600">Workplace audits and statutory compliance.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">OHS Training</h3><p class="mt-2 text-sm text-neutral-600">Custom modules and toolbox talks.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Fire Safety</h3><p class="mt-2 text-sm text-neutral-600">Fire risk assessments and evacuation plans.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Incident Investigations</h3><p class="mt-2 text-sm text-neutral-600">Root-cause analysis and CAPA.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Construction Site Safety</h3><p class="mt-2 text-sm text-neutral-600">SSHEP and contractor oversight.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">HSE Management Systems</h3><p class="mt-2 text-sm text-neutral-600">ISO 45001 & 14001 systems.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">About SUNASIRO</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Protecting workforce health & ensuring regulatory compliance</h2>
+      <p class="mt-6 text-neutral-600 max-w-3xl leading-relaxed">SUNASIRO CONSULTANCY is a Mombasa-based medical and Occupational Safety & Health firm dedicated to helping organisations build safer, healthier workplaces across Kenya.</p>
+    </div>
+  </section>
+
+  <section id="clients" class="py-20 md:py-28 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Who We Serve</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Industries We Partner With</h2>
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Construction</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Manufacturing</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Hospitals & Clinics</p></div>
+        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Hotels & Oil & Gas</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 md:py-28 bg-primary-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <p class="text-primary-300 font-semibold text-sm uppercase tracking-wider mb-3">Get in Touch</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold">Request a Consultation</h2>
+          <p class="mt-4 text-primary-100">Tell us about your needs. We will respond promptly.</p>
+          <div class="mt-10 space-y-4">
+            <p><span class="text-primary-300 text-sm">Phone / WhatsApp</span><br/><a href="tel:+254788780850" class="text-lg font-semibold">0788 780 850</a></p>
+            <p><span class="text-primary-300 text-sm">Email</span><br/><a href="mailto:sunasiro95@gmail.com" class="text-lg font-semibold">sunasiro95@gmail.com</a></p>
+            <p><span class="text-primary-300 text-sm">Location</span><br/><span class="text-lg font-semibold">Mombasa CBD, Kenya</span></p>
+          </div>
+        </div>
+        <div>
+          <form id="contactForm" class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-neutral-900 space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-1.5">Full Name *</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-1.5">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="you@company.com" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-1.5">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="07XX XXX XXX" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium mb-1.5">Service Interest</label>
+              <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none bg-white">
+                <option value="">Select a service</option>
+                <option>Wellness Check-ups</option>
+                <option>Fit-to-Work / Exit Examinations</option>
+                <option>HSE Audits & Inspections</option>
+                <option>OHS Training</option>
+                <option>Fire Safety Assessments</option>
+                <option>Construction Site Safety</option>
+                <option>Other / General Enquiry</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium mb-1.5">Message *</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none resize-none" placeholder="Tell us briefly about your needs..."></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-accent-500 text-white font-semibold hover:bg-accent-600 transition">Send Request</button>
+            <p id="formStatus" class="text-sm text-center hidden"></p>
+            <p class="text-xs text-neutral-500 text-center">Your request will be sent to <strong>sunasiro95@gmail.com</strong>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-neutral-900 text-neutral-300 py-12 text-center">
+    <p class="font-display font-bold text-white text-lg">SUNASIRO CONSULTANCY</p>
+    <p class="mt-2 text-sm">Protecting People. Ensuring Compliance. Building Safer Workplaces.</p>
+    <p class="mt-6 text-sm">© 2026 SUNASIRO CONSULTANCY. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/254788780850" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // Instant jump to contact form (no smooth scroll)
+    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = document.getElementById('contact');
+        if (section) {
+          section.scrollIntoView({ behavior: 'instant', block: 'start' });
+          const nameInput = document.getElementById('name');
+          if (nameInput) setTimeout(() => nameInput.focus(), 50);
+          history.replaceState(null, '', '#contact');
+        }
+      });
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) header.classList.add('nav-scrolled');
+      else header.classList.remove('nav-scrolled');
+    });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        statusEl.classList.add('hidden');
+        const data = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          phone: form.phone.value.trim(),
+          service: form.service.value,
+          message: form.message.value.trim()
+        };
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          const result = await res.json().catch(() => ({}));
+          if (res.ok) {
+            statusEl.classList.remove('hidden');
+            statusEl.classList.add('text-green-600');
+            statusEl.textContent = 'Thank you! Your request has been sent.';
+            form.reset();
+          } else {
+            throw new Error(result.error || 'Something went wrong');
+          }
+        } catch (err) {
+          statusEl.classList.remove('hidden');
+          statusEl.classList.add('text-red-600');
+          statusEl.textContent = err.message || 'Could not send. Please call 0788 780 850.';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Request';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
