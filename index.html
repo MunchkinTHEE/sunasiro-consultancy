@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SUNASIRO CONSULTANCY | Medical Fitness, Wellness & HSE Consultancy in Mombasa</title>
-  <meta name="description" content="SUNASIRO CONSULTANCY — Expert medical fitness exams, wellness programmes, HSE audits in Mombasa, Kenya." />
+  <meta name="description" content="SUNASIRO CONSULTANCY — Expert medical fitness exams, wellness programmes, HSE audits, fire safety, construction safety & ISO 45001/14001 systems in Mombasa CBD, Kenya." />
   <link rel="canonical" href="https://sunasiroconsultancy.vercel.app/" />
+  <meta property="og:image" content="https://sunasiroconsultancy.vercel.app/images/foreman.jpg" />
   <meta name="theme-color" content="#00b4d8" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -17,10 +18,7 @@
             accent: {500:'#ef233c',600:'#d90429',700:'#b00020'},
             neutral: {50:'#f8fafc',100:'#f1f5f9',800:'#1e293b',900:'#0f172a'}
           },
-          fontFamily: {
-            sans: ['Inter','system-ui','sans-serif'],
-            display: ['Plus Jakarta Sans','Inter','sans-serif']
-          }
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Plus Jakarta Sans','Inter','sans-serif'] }
         }
       }
     }
@@ -57,6 +55,7 @@
           <a href="#services" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Services</a>
           <a href="#about" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">About</a>
           <a href="#clients" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Clients</a>
+          <a href="#insights" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Insights</a>
           <a href="#contact" class="text-sm font-medium text-neutral-800 hover:text-primary-600 transition">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -72,6 +71,7 @@
         <a href="#services" class="block py-2 text-neutral-800 font-medium">Services</a>
         <a href="#about" class="block py-2 text-neutral-800 font-medium">About</a>
         <a href="#clients" class="block py-2 text-neutral-800 font-medium">Clients</a>
+        <a href="#insights" class="block py-2 text-neutral-800 font-medium">Insights</a>
         <a href="#contact" class="block py-2 text-neutral-800 font-medium">Contact</a>
         <a href="#contact" class="block mt-2 text-center py-3 rounded-full bg-accent-500 text-white font-semibold">Request Consultation</a>
       </div>
@@ -80,17 +80,26 @@
 
   <section id="home" class="relative min-h-screen flex items-center gradient-hero overflow-hidden pt-20">
     <div class="absolute inset-0 opacity-20">
-      <img src="images/foreman.jpg" alt="Construction site safety" class="w-full h-full object-cover" />
+      <img src="images/foreman.jpg" alt="African construction site foreman ensuring site safety – SUNASIRO HSE consultancy" class="w-full h-full object-cover" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary-900/95 via-primary-800/85 to-primary-700/70"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
       <div class="max-w-3xl">
-        <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-primary-100 text-sm font-medium mb-6">Medical & Occupational Safety Experts — Mombasa</p>
-        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">Protecting People.<br/><span class="text-primary-200">Ensuring Compliance.</span><br/>Building Safer Workplaces.</h1>
-        <p class="mt-6 text-lg md:text-xl text-primary-100/90 max-w-2xl">Expert medical fitness, wellness programmes and full-spectrum HSE consultancy across Kenya.</p>
+        <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-primary-100 text-sm font-medium mb-6 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+          Medical & Occupational Safety Experts — Mombasa
+        </p>
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+          Protecting People.<br/>
+          <span class="text-primary-200">Ensuring Compliance.</span><br/>
+          Building Safer Workplaces.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-primary-100/90 max-w-2xl leading-relaxed">
+          Expert medical fitness, wellness programmes and full-spectrum HSE consultancy for construction, manufacturing, healthcare, hospitality and more across Kenya.
+        </p>
         <div class="mt-10 flex flex-wrap gap-4">
-          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent-500 text-white font-semibold hover:bg-accent-600 transition shadow-xl">Book Consultation</a>
-          <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold hover:bg-white/20 transition border border-white/20">Explore Services</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent-500 text-white font-semibold text-base hover:bg-accent-600 transition shadow-xl shadow-accent-500/30">Book Consultation</a>
+          <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-semibold text-base hover:bg-white/20 transition backdrop-blur-sm border border-white/20">Explore Services</a>
         </div>
       </div>
     </div>
@@ -98,101 +107,175 @@
 
   <section id="services" class="py-20 md:py-28 bg-neutral-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
         <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">What We Deliver</p>
         <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Comprehensive Medical & HSE Solutions</h2>
+        <p class="mt-4 text-neutral-600 text-lg">From wellness check-ups to full HSE management systems — everything your organisation needs to protect people and stay compliant.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Wellness Check-ups</h3><p class="mt-2 text-sm text-neutral-600">Corporate & individual medical examinations.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Fit-to-Work & Exit Exams</h3><p class="mt-2 text-sm text-neutral-600">Capability assessments and exit health records.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">HSE Audits & Inspections</h3><p class="mt-2 text-sm text-neutral-600">Workplace audits and statutory compliance.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">OHS Training</h3><p class="mt-2 text-sm text-neutral-600">Custom modules and toolbox talks.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Fire Safety</h3><p class="mt-2 text-sm text-neutral-600">Fire risk assessments and evacuation plans.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Incident Investigations</h3><p class="mt-2 text-sm text-neutral-600">Root-cause analysis and CAPA.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">Construction Site Safety</h3><p class="mt-2 text-sm text-neutral-600">SSHEP and contractor oversight.</p></div>
-        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm"><h3 class="font-display font-semibold text-lg">HSE Management Systems</h3><p class="mt-2 text-sm text-neutral-600">ISO 45001 & 14001 systems.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">Wellness Check-ups</h3><p class="mt-2 text-sm text-neutral-600">Corporate & individual medical examinations and wellness plans.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">Fit-to-Work & Exit Exams</h3><p class="mt-2 text-sm text-neutral-600">Capability assessments and exit health records with certificates.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">HSE Audits & Inspections</h3><p class="mt-2 text-sm text-neutral-600">Workplace audits, risk assessments and statutory compliance.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">Risk & Incident Management</h3><p class="mt-2 text-sm text-neutral-600">Investigations, root-cause analysis and emergency planning.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">Fire Safety & Evacuation</h3><p class="mt-2 text-sm text-neutral-600">Fire risk assessments, maps and warden guidelines.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">OHS Training</h3><p class="mt-2 text-sm text-neutral-600">Custom modules, toolbox talks and competency certificates.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">Construction Site Safety</h3><p class="mt-2 text-sm text-neutral-600">SSHEP, risk registers and contractor oversight.</p></div>
+        <div class="card-hover bg-white rounded-2xl p-6 border border-neutral-100 shadow-sm fade-up"><h3 class="font-display font-semibold text-lg text-neutral-900">HSE Management Systems</h3><p class="mt-2 text-sm text-neutral-600">ISO 45001 & ISO 14001 integrated systems.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Image strip – all photos restored -->
+  <section class="py-12 bg-primary-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="images/fit-to-work.jpg" alt="Occupational health officer conducting fit-to-work medical examination" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="images/foreman.jpg" alt="African construction site foreman in hard hat and high-visibility vest" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="images/firefighters.jpg" alt="Kenyan firefighters during fire safety training" class="w-full h-full object-cover" />
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[4/3]">
+          <img src="images/toolbox-talk.jpg" alt="HSE toolbox talk with African workers in PPE" class="w-full h-full object-cover" />
+        </div>
+      </div>
+      <p class="text-center text-primary-200 text-sm mt-6">Real people. Real workplaces. African talent protecting African workforces.</p>
     </div>
   </section>
 
   <section id="about" class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">About SUNASIRO</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Protecting workforce health & ensuring regulatory compliance</h2>
-      <p class="mt-6 text-neutral-600 max-w-3xl leading-relaxed">SUNASIRO CONSULTANCY is a Mombasa-based medical and Occupational Safety & Health firm dedicated to helping organisations build safer, healthier workplaces across Kenya.</p>
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="fade-up">
+          <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">About SUNASIRO</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900 leading-tight">Protecting workforce health & ensuring regulatory compliance</h2>
+          <p class="mt-6 text-neutral-600 leading-relaxed">SUNASIRO CONSULTANCY is a Mombasa-based medical and Occupational Safety & Health (OSH) firm dedicated to helping organisations build safer, healthier workplaces across Kenya.</p>
+          <p class="mt-4 text-neutral-600 leading-relaxed">Our mission is simple: protect people, ensure compliance, and help you build a lasting culture of safety.</p>
+        </div>
+        <div class="relative fade-up">
+          <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="images/fit-to-work.jpg" alt="Occupational health officer conducting fit-to-work medical examination" class="w-full h-full object-cover aspect-[4/3]" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="clients" class="py-20 md:py-28 bg-neutral-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Who We Serve</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Industries We Partner With</h2>
-      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Construction</p></div>
-        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Manufacturing</p></div>
-        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Hospitals & Clinics</p></div>
-        <div class="bg-white rounded-2xl p-6 border border-neutral-100"><p class="font-semibold">Hotels & Oil & Gas</p></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 fade-up">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Who We Serve</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Industries We Partner With</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🏗️</div><p class="font-semibold text-neutral-900">Construction</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🏭</div><p class="font-semibold text-neutral-900">Manufacturing</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🏥</div><p class="font-semibold text-neutral-900">Hospitals & Clinics</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🏨</div><p class="font-semibold text-neutral-900">Hotels & Restaurants</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">📦</div><p class="font-semibold text-neutral-900">Warehouses & Logistics</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">⛽</div><p class="font-semibold text-neutral-900">Oil & Gas</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🤝</div><p class="font-semibold text-neutral-900">NGOs & Government</p></div>
+        <div class="bg-white rounded-2xl p-6 text-center border border-neutral-100 shadow-sm card-hover fade-up"><div class="text-3xl mb-3">🏢</div><p class="font-semibold text-neutral-900">SMEs</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="insights" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 fade-up">
+        <p class="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">Resources</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900">Consulting Tools We Provide</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Risk Assessments</h3><p class="text-sm text-neutral-600 mt-1">Task-specific and site-wide risk registers.</p></div>
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Safety Inspection Checklists</h3><p class="text-sm text-neutral-600 mt-1">Ready-to-use and customised checklists.</p></div>
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Audit Reports</h3><p class="text-sm text-neutral-600 mt-1">Clear findings and prioritised CAPA.</p></div>
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Training Materials</h3><p class="text-sm text-neutral-600 mt-1">Modules, slides and evaluation tools.</p></div>
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Incident Investigation Reports</h3><p class="text-sm text-neutral-600 mt-1">RCA, lessons learned and CAPA.</p></div>
+        <div class="p-5 rounded-2xl bg-neutral-50 border border-neutral-100 fade-up"><h3 class="font-semibold text-neutral-900">Emergency Response Plans</h3><p class="text-sm text-neutral-600 mt-1">Evacuation maps and response procedures.</p></div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="py-20 md:py-28 bg-primary-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12">
-        <div>
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="fade-up">
           <p class="text-primary-300 font-semibold text-sm uppercase tracking-wider mb-3">Get in Touch</p>
           <h2 class="font-display text-3xl md:text-4xl font-bold">Request a Consultation</h2>
-          <p class="mt-4 text-primary-100">Tell us about your needs. We will respond promptly.</p>
-          <div class="mt-10 space-y-4">
-            <p><span class="text-primary-300 text-sm">Phone / WhatsApp</span><br/><a href="tel:+254788780850" class="text-lg font-semibold">0788 780 850</a></p>
-            <p><span class="text-primary-300 text-sm">Email</span><br/><a href="mailto:sunasiro95@gmail.com" class="text-lg font-semibold">sunasiro95@gmail.com</a></p>
-            <p><span class="text-primary-300 text-sm">Location</span><br/><span class="text-lg font-semibold">Mombasa CBD, Kenya</span></p>
+          <p class="mt-4 text-primary-100 leading-relaxed">Tell us about your needs. We’ll respond promptly with a clear next step.</p>
+          <div class="mt-10 space-y-5">
+            <div>
+              <p class="text-sm text-primary-300">Phone / WhatsApp</p>
+              <a href="tel:+254788780850" class="text-lg font-semibold hover:text-primary-200 transition">0788 780 850</a>
+            </div>
+            <div>
+              <p class="text-sm text-primary-300">Email</p>
+              <a href="mailto:sunasiro95@gmail.com" class="text-lg font-semibold hover:text-primary-200 transition">sunasiro95@gmail.com</a>
+            </div>
+            <div>
+              <p class="text-sm text-primary-300">Location</p>
+              <p class="text-lg font-semibold">Mombasa CBD, Mombasa County</p>
+            </div>
           </div>
         </div>
-        <div>
-          <form id="contactForm" class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-neutral-900 space-y-5">
-            <div>
-              <label for="name" class="block text-sm font-medium mb-1.5">Full Name *</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="Your name" />
+        <div class="fade-up">
+          <form id="contactForm" class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-neutral-900">
+            <div class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-neutral-700 mb-1.5">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="Your name" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-700 mb-1.5">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="you@company.com" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-neutral-700 mb-1.5">Phone</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="07XX XXX XXX" />
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium text-neutral-700 mb-1.5">Service Interest</label>
+                <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none bg-white">
+                  <option value="">Select a service</option>
+                  <option>Wellness Check-ups</option>
+                  <option>Fit-to-Work / Exit Examinations</option>
+                  <option>HSE Audits & Inspections</option>
+                  <option>Risk Management & Incident Investigations</option>
+                  <option>OHS Training</option>
+                  <option>Fire Safety Assessments</option>
+                  <option>Construction Site Safety</option>
+                  <option>HSE Management Systems (ISO)</option>
+                  <option>Other / General Enquiry</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-neutral-700 mb-1.5">Message *</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none resize-none" placeholder="Tell us briefly about your needs..."></textarea>
+              </div>
+              <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-accent-500 text-white font-semibold hover:bg-accent-600 transition">Send Request</button>
+              <p id="formStatus" class="text-sm text-center hidden"></p>
+              <p class="text-xs text-neutral-500 text-center">Your request will be sent to <strong>sunasiro95@gmail.com</strong>.</p>
             </div>
-            <div>
-              <label for="email" class="block text-sm font-medium mb-1.5">Email *</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="you@company.com" />
-            </div>
-            <div>
-              <label for="phone" class="block text-sm font-medium mb-1.5">Phone</label>
-              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none" placeholder="07XX XXX XXX" />
-            </div>
-            <div>
-              <label for="service" class="block text-sm font-medium mb-1.5">Service Interest</label>
-              <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none bg-white">
-                <option value="">Select a service</option>
-                <option>Wellness Check-ups</option>
-                <option>Fit-to-Work / Exit Examinations</option>
-                <option>HSE Audits & Inspections</option>
-                <option>OHS Training</option>
-                <option>Fire Safety Assessments</option>
-                <option>Construction Site Safety</option>
-                <option>Other / General Enquiry</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium mb-1.5">Message *</label>
-              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:ring-2 focus:ring-primary-500 outline-none resize-none" placeholder="Tell us briefly about your needs..."></textarea>
-            </div>
-            <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-accent-500 text-white font-semibold hover:bg-accent-600 transition">Send Request</button>
-            <p id="formStatus" class="text-sm text-center hidden"></p>
-            <p class="text-xs text-neutral-500 text-center">Your request will be sent to <strong>sunasiro95@gmail.com</strong>.</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-neutral-900 text-neutral-300 py-12 text-center">
-    <p class="font-display font-bold text-white text-lg">SUNASIRO CONSULTANCY</p>
-    <p class="mt-2 text-sm">Protecting People. Ensuring Compliance. Building Safer Workplaces.</p>
-    <p class="mt-6 text-sm">© 2026 SUNASIRO CONSULTANCY. All rights reserved.</p>
+  <footer class="bg-neutral-900 text-neutral-300 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <div class="w-9 h-9 rounded-lg bg-primary-600 flex items-center justify-center text-white font-display font-bold">S</div>
+        <span class="font-display font-bold text-white text-lg">SUNASIRO</span>
+      </div>
+      <p class="text-sm">Protecting People. Ensuring Compliance. Building Safer Workplaces.</p>
+      <p class="mt-2 text-sm">Mombasa CBD, Mombasa County, Kenya</p>
+      <p class="mt-8 text-sm">© 2026 SUNASIRO CONSULTANCY. All rights reserved.</p>
+    </div>
   </footer>
 
   <a href="https://wa.me/254788780850" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
@@ -200,7 +283,6 @@
   </a>
 
   <script>
-    // Instant jump to contact form (no smooth scroll)
     document.querySelectorAll('a[href="#contact"]').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -213,18 +295,19 @@
         }
       });
     });
-
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 40) header.classList.add('nav-scrolled');
       else header.classList.remove('nav-scrolled');
     });
-
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
-
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     const form = document.getElementById('contactForm');
     const statusEl = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
@@ -234,28 +317,16 @@
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         statusEl.classList.add('hidden');
-        const data = {
-          name: form.name.value.trim(),
-          email: form.email.value.trim(),
-          phone: form.phone.value.trim(),
-          service: form.service.value,
-          message: form.message.value.trim()
-        };
+        const data = { name: form.name.value.trim(), email: form.email.value.trim(), phone: form.phone.value.trim(), service: form.service.value, message: form.message.value.trim() };
         try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
+          const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
           const result = await res.json().catch(() => ({}));
           if (res.ok) {
             statusEl.classList.remove('hidden');
             statusEl.classList.add('text-green-600');
             statusEl.textContent = 'Thank you! Your request has been sent.';
             form.reset();
-          } else {
-            throw new Error(result.error || 'Something went wrong');
-          }
+          } else { throw new Error(result.error || 'Something went wrong'); }
         } catch (err) {
           statusEl.classList.remove('hidden');
           statusEl.classList.add('text-red-600');
